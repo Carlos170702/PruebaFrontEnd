@@ -23,11 +23,11 @@ export const Register = () => {
   useEffect(() => {
     if (message?.msg.length > 0) {
       message.status
-        ? Swal.fire("Good job!", "You clicked the button!", "success")
+        ? Swal.fire("Registrado", message.msg, "success")
         : Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
+            title: "Error",
+            text: message.msg,
           });
     }
   }, [message]);
